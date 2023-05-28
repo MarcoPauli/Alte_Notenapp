@@ -1,9 +1,10 @@
+import userBackgroundColor from "./theme.js";
 /*
 THIS JAVASCRIPT FILE IS RESPONSIBLE FOR THE BACKGROUND PROCESS WHICH MEANS THAT ALL FUNCTIONS WHO HAVE TO BE EXECUTED IN A REGULAR PERIOD OF TIME ARE STORED IN THIS DOCUMENT
 */
-
 //This code runs functions "checkToCalculateAverage()", "saveGradeTableOnLocalStorage()" once every second 
 let backgroundProcessing = setInterval(() => {
+    userBackgroundColor();
     checkToCalculateAverage();
     calculateEntireGradePointAverage();
     saveGradeTableOnLocalStorage();

@@ -1,7 +1,3 @@
-setInterval(() => {
-    userBackgroundColor();
-}, 1000);
-
 //The task of the function "userBackgroundColor" is to check which background color is currently being used by the system and, as soon as these settings are changed, adjust the app settings accordingly.
 function userBackgroundColor() {
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -37,3 +33,5 @@ function changeTableTheme(x, tbColor, color) {
     }
 }
 //End of function "changeToXMode"
+
+export default userBackgroundColor;

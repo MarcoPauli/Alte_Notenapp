@@ -105,7 +105,7 @@ function editGrades() {
             subjectValue.innerHTML = subjectValue.innerHTML + "; " + `<font>${grade}</font>`;
         }
         selectGrade.value = "Note wählen";
-        showInformation("✔ Note erfolgreich hinzugefügt")
+        showInformation("✔ Note erfolgreich hinzugefügt", "green")
     }
 }
 //End of function "editGrades"
@@ -137,16 +137,17 @@ function removeCell() {
         style.backgroundColor = "white";
         style.fontWeight = "normal";
         style.textAlign = "left";
-        showInformation("✔ Zelle erfolgreich gelöscht");
+        showInformation("✔ Zelle erfolgreich gelöscht", green);
         deleteThisCellRadioNot.checked = "checked";
     }
 }
 //End of function "removeCell"
 
 //This function shows - if executed - the given information
-function showInformation(info) {
+function showInformation(info, color) {
     let informationDiv = document.getElementById("informationDiv");
     informationDiv.style.display = "block";
+    informationDiv.style.color = color;
     let information = document.getElementById("information");
     information.innerHTML = info;
     setTimeout(() => {
@@ -155,3 +156,4 @@ function showInformation(info) {
     }, 2000)
 }
 //End of function "showInformation"
+export default showInformation
