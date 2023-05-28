@@ -1,0 +1,41 @@
+<!--<div id="editGradesDiv">
+            <div id="addGrade">
+                <h3 id="addGradeHeading">Note hinzufügen</h3>
+                <form id="addGradeForm">
+                    <select id="gradeSelectSubjects">
+                        <option selected id="needToSelect">Bitte wählen</option>
+                        <option id="addBio">Biologie</option>
+                        <option id="addChemics">Chemie</option>
+                        <option id="addGerman">Deutsch</option>
+                        <option id="addEnglish">Englisch</option>
+                        <option id="addGeografy">Geografie</option>
+                        <option id="addHistory">Geschichte</option>
+                        <option id="addArt">Kunst</option>
+                        <option id="addLatin">Latein</option>
+                        <option id="addMaths">Mathe</option>
+                        <option id="addMusic">Musik</option>
+                        <option id="addPhysics">Physik</option>
+                        <option id="addPuG">PuG</option>
+                        <option id="addReligion">Religion</option>
+                        <option id="addSpanish">Spanisch</option>
+                        <option id="addGames">Sport</option>
+                        <option id="addEconomics">Wirtschaft</option>
+                        </option>
+                    </select><br>
+                    <input name="radioKLNOrRadioGLN" type="radio" value="KLN" id="radioKLNi">
+                    <label for="radioKLNi">KLN</label>
+                    <input name="radioKLNOrRadioGLN" value="GLN" type="radio" id="radioGLNi">
+                    <label for="radioGLNi">GLN</label><br><br>
+                    <select id="gradeSelectGrade">
+                        <option>Note wählen</option>
+                        <option id="selectGrade1">1</option>
+                        <option id="selectGrade2">2</option>
+                        <option id="selectGrade3">3</option>
+                        <option id="selectGrade4">4</option>
+                        <option id="selectGrade5">5</option>
+                        <option id="selectGrade6">6</option>
+                    </select><br><br>
+                    <button id="addGradeBtn">Hinzufügen</button>
+                </form>
+                <p id="addGradesMessages">:)</p>
+            </div>-->
