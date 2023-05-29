@@ -1,4 +1,4 @@
-import showInformation from "./main.js";
+import showInformation from "./info.js";
 let addSubjectBtn = document.getElementById("addSubjectBtn");
 let isEqual = false;
 

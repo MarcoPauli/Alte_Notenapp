@@ -43,7 +43,7 @@ addGradeDivBtn.addEventListener("click", () => {
 });
 
 confirmToDeleteThisCell.addEventListener("click", () => {
-        removeCell();
+    removeCell();
 });
 
 
@@ -156,4 +156,3 @@ function showInformation(info, color) {
     }, 2000)
 }
 //End of function "showInformation"
-export default showInformation
