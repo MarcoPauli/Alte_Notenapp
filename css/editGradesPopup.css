@@ -14,6 +14,7 @@ option {
 #addGradeBtn:hover {
     background-color: rgb(51, 0, 153);
 }
+
 #editGradesPopup {
     position: fixed;
     right: 10%;
@@ -42,9 +43,11 @@ option {
     color: white;
     border: none;
 }
+
 #finished:hover {
     background-color: rgb(51, 0, 153);
 }
+
 #confirmToDeleteThisCell, #confirmToDeleteThisSubject {
     border: none;
     background-color: red;
