@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notenapp</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/editSubjects.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/editGradesPopup.css">
     <script src="js/main.js" defer></script>
     <link rel="manifest" href="manifest.webmanifest">
     <script defer type="module" href="js/theme.js"></script>
     <script type="module" defer src="js/background.process.js"></script>
-    <script type="module" defer src="js/editSubject.js"></script>
+    <script defer src="js/editSubject.js"></script>
     <script type="module" defer src="js/info.js"></script>
 </head>
 <body>
@@ -18,7 +21,7 @@
     <main>
         <div id="standardVisible">
             <div id="standardInformation">
-                <h1 id="mainHeader">Noten:</h1>
+                <h1 id="mainHeading">Noten:</h1>
                 <div id="averageAllSubjectsDiv" title="&#216;ges"><font id="averageAllSubjects">-</font></div>
                 <button id="statistics">Statistiken</button>
             </div>
@@ -163,6 +166,22 @@
                 <button id="confirmToDeleteThisCell">Löschen</button>
             </div>
             <button id="finished">Fertig</button>
+        </div>
+        <div id="editSubjectsPopup">
+            <div id="renameSubjectDiv">
+                <h3 id="renameSubjectDivHeading">Fach umbenennen</h3>
+                <input type="text" id="newSubjectName" placeholder="Neuer Name"><br>
+                <button id="confirmRenaming">Umbenennen</button>
+            </div>
+            <div id="deleteSubjectDiv">
+                <h3 id="deleteSubjectDivHeading">Fach löschen</h3>
+                <p id="explainSubjectDeletiionToUser">Dieses Fach löschen?</p>
+                <input type="radio" name="delteSubject" id="deleteThisSubject">
+                <label for="deleteThisSubject">Ja</label>
+                <input type="radio" name="delteSubject" id="deleteThisSubjectNot" checked>
+                <label for="deleteThisSubjectNot">Nein</label><br><br>
+                <button id="confirmToDeleteThisSubject">Löschen</button>
+            </div>
         </div>
     </main>
 </body>

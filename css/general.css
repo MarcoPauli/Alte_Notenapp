@@ -1,0 +1,118 @@
+/*General*/
+body {
+    margin: 0;
+    background-color: aqua;
+}
+
+main {
+    margin: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#logo{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 5%;
+    cursor: pointer;
+}
+
+#mainHeading {
+    position: absolute;
+    top: 15%;
+    margin-left: 0px;
+}
+
+#averageAllSubjectsDiv {
+    cursor: pointer;
+    position: absolute;
+    top: 10%;
+    width: 20%;
+    right: 40%;
+    text-align: center;
+    z-index: 1;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+#standardVisible {
+    display: block;
+}
+
+#statistics {
+    color: rgb(51, 0, 153);
+    text-decoration: underline;
+    cursor: pointer;
+    border: none;
+    background-color: aqua;
+    position: absolute;
+    top: 30%;
+    margin-left: 5px;
+}
+
+#statistics:hover {
+    text-decoration: none;
+}
+
+#editGradesBtn {
+    position: fixed;
+    right: 5%;
+    top: 5%;
+    font-size: xx-large;
+    border: none;
+    cursor: pointer;
+    color: grey;
+}
+
+#editGradesBtn:hover {
+    color: rgb(51, 0, 153);
+}
+
+#overlayDiv {
+    background-color: rgba(100, 100, 100, 0.5);
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 3;
+    display: none;
+}
+
+#informationDiv {
+    text-align: center;
+    position: fixed;
+    z-index: 5;
+    top: 15%;
+    bottom: 80%;
+    right: 30%;
+    left: 30%;
+    background-color: inherit;
+    color: green;
+    font-weight: bold;
+    display: none;
+    border: none;
+}
+
+#information {
+    height: 80%;
+    position: relative;
+    top: 10%;
+    bottom: 10%;
+}
+
+#editModeDiv {
+    display: none;
+}
+
+#showEditModeTxt {
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    color: red;
+    font-weight: bold;
+}
+
+#standardInformation {
+    display: block;
+}

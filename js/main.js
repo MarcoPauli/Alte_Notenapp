@@ -57,9 +57,12 @@ finished.addEventListener("click", () => {
 function changeIntoEditMode() {
     let klnClass = document.getElementsByClassName("KLNs");
     let glnClass = document.getElementsByClassName("GLNs");
+    let subjectClass = document.getElementsByClassName("subject");
     for (let i = 0; i < klnClass.length; i++) {
         klnClass[i].setAttribute("onclick", "showEditGradesPopup(this)");
         klnClass[i].style.cursor = "pointer";
+        subjectClass[i].setAttribute("onclick", "showEditSubjectsPopup(this)");
+        subjectClass[i].style.cursor = "pointer";
         glnClass[i].setAttribute("onclick", "showEditGradesPopup(this)");
         glnClass[i].style.cursor = "pointer";
     }
@@ -85,9 +88,12 @@ function leaveEditMode () {
     editModeDiv.style.display = "none";
     let klnClass = document.getElementsByClassName("KLNs");
     let glnClass = document.getElementsByClassName("GLNs");
+    let subjectClass = document.getElementsByClassName("subject");
     for (let i = 0; i < klnClass.length; i++) {
         klnClass[i].removeAttribute("onclick")
         klnClass[i].style.cursor = "unset";
+        subjectClass[i].removeAttribute("onclick");
+        subjectClass[i].style.cursor = "unset";
         glnClass[i].removeAttribute("onclick");
         glnClass[i].style.cursor = "unset";
     }
@@ -137,11 +143,15 @@ function removeCell() {
         style.backgroundColor = "white";
         style.fontWeight = "normal";
         style.textAlign = "left";
-        showInformation("✔ Zelle erfolgreich gelöscht", green);
+        showInformation("✔ Zelle erfolgreich gelöscht", "green");
         deleteThisCellRadioNot.checked = "checked";
     }
 }
 //End of function "removeCell"
+
+function showEditSubjectsPopup(THIS) {
+    alert("Diese Funktion wird gerade entwickelt und ist demnächst verfügbar...")
+}
 
 //This function shows - if executed - the given information
 function showInformation(info, color) {

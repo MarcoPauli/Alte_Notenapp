@@ -1,4 +1,3 @@
-import showInformation from "./info.js";
 let addSubjectBtn = document.getElementById("addSubjectBtn");
 let isEqual = false;
 
@@ -12,6 +11,7 @@ function addSubject() {
     checkID(userInput.value);
     if (!isEqual && !((userInput.value).includes(" ")) && !(userInput.value == "")) {
         addParticularSubject(userInput.value, table);
+        userInput.value = "";
     } else if (isEqual) {
         showInformation("Name bereits vergeben. Bitte neuen Name überlegen.", "red");
         userInput.value = "";
@@ -67,3 +67,18 @@ function setIsEqual(x) {
     isEqual = x;
     return isEqual;
 }
+
+//This function shows - if executed - the given information
+function showInformation(info, color) {
+    let informationDiv = document.getElementById("informationDiv");
+    informationDiv.style.display = "block";
+    informationDiv.style.color = color;
+    let information = document.getElementById("information");
+    information.innerHTML = info;
+    setTimeout(() => {
+        informationDiv.style.display = "none";
+        information.innerHTML = "";
+    }, 2000)
+}
+//End of function "showInformation"
+

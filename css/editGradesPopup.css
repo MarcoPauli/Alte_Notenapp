@@ -1,0 +1,66 @@
+option {
+    margin: 10px;
+}
+
+#addGradeBtn {
+    border: none;
+    background-color: rgb(51, 0, 153);
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#addGradeBtn:hover {
+    background-color: rgb(51, 0, 153);
+}
+#editGradesPopup {
+    position: fixed;
+    right: 10%;
+    left: 10%;
+    top: 10%;
+    bottom: 10%;
+    border: 2px solid rgb(51, 0, 153);
+    z-index: 3;
+    background-color: white;
+    display: none;
+}
+
+#addGradeDiv, #removeGradeDiv {
+    margin-left: 10px;
+}
+
+#finished {
+    position: absolute;
+    bottom: 10%;
+    width: 20%;
+    left: 40%;
+    right: 40%;
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgb(51, 0, 153);
+    color: white;
+    border: none;
+}
+#finished:hover {
+    background-color: rgb(51, 0, 153);
+}
+#confirmToDeleteThisCell, #confirmToDeleteThisSubject {
+    border: none;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#addGradeDivBtn {
+    border: none;
+    background-color: rgb(51, 0, 153);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#addGradeSelect {
+    padding: 5px;
+}
