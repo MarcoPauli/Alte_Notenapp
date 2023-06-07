@@ -7,6 +7,7 @@ let editGradesDiv = document.getElementById("editGradesDiv");
 let confirmToChangeToEditMode = document.getElementById("confirmToChangeToEditMode");
 let standardVisible = document.getElementById("standardVisible");
 let subjectValue = "";
+//let editSubjectValue = "";
 let finished = document.getElementById("finished");
 let editGradesPopup = document.getElementById("editGradesPopup");
 let confirmToDeleteThisCell = document.getElementById("confirmToDeleteThisCell");
@@ -20,9 +21,12 @@ if (localstorage != null) {
     table.innerHTML = localstorage;
     let klnClass = document.getElementsByClassName("KLNs");
     let glnClass = document.getElementsByClassName("GLNs");
+    let subjectClass = document.getElementsByClassName("subject");
     for (let i = 0; i < klnClass.length; i++) {
         klnClass[i].removeAttribute("onclick")
         klnClass[i].style.cursor = "unset";
+        subjectClass[i].removeAttribute("onclick");
+        subjectClass[i].style.cursor = "unset";
         glnClass[i].removeAttribute("onclick");
         glnClass[i].style.cursor = "unset";
     }
@@ -50,7 +54,7 @@ confirmToDeleteThisCell.addEventListener("click", () => {
 finished.addEventListener("click", () => {
     editGradesPopup.style.display = "none";
     overlayDiv.style.display = "none";
-})
+});
 //End of all the eventlisteners(apart form them that are defined in functions)
 
 //This function changes into the editmode
@@ -133,6 +137,10 @@ function saveGradeValue(x) {
 }
 //End of function "saveGradeValue"
 
+/*function saveSubjectValue() {
+    return editSubjectValue;
+}*/
+
 //This funciton removes the content of the current cell
 function removeCell() {
     let deleteThisCellRadio = document.getElementById("deleteThisCellRadio");
@@ -149,9 +157,14 @@ function removeCell() {
 }
 //End of function "removeCell"
 
-function showEditSubjectsPopup(THIS) {
-    alert("Diese Funktion wird gerade entwickelt und ist demnächst verfügbar...")
-}
+/*function showEditSubjectsPopup(THIS) {
+    alert("Diese Funktion wird gerade entwickelt und ist demnächst verfügbar...");
+    let editSubjectsPopup = document.getElementById("editSubjectsPopup");
+    editSubjectsPopup.style.display = "block";
+    let overlayDiv = document.getElementById("overlayDiv");
+    overlayDiv.style.display = "block";
+    saveSubjectValue(THIS);
+}*/
 
 //This function shows - if executed - the given information
 function showInformation(info, color) {

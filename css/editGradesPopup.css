@@ -27,11 +27,11 @@ option {
     display: none;
 }
 
-#addGradeDiv, #removeGradeDiv {
+.InsidePopupsDivs {
     margin-left: 10px;
 }
 
-#finished {
+.popupFinished {
     position: absolute;
     bottom: 10%;
     width: 20%;
@@ -44,11 +44,11 @@ option {
     border: none;
 }
 
-#finished:hover {
+.popupFinished:hover {
     background-color: rgb(51, 0, 153);
 }
 
-#confirmToDeleteThisCell, #confirmToDeleteThisSubject {
+.deleteBtn {
     border: none;
     background-color: red;
     color: white;
@@ -56,7 +56,7 @@ option {
     cursor: pointer;
 }
 
-#addGradeDivBtn {
+.confirmToAdd {
     border: none;
     background-color: rgb(51, 0, 153);
     color: white;

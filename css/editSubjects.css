@@ -30,3 +30,9 @@
     background-color: white;
     display: none;
 }
+/*Please note: the "deleteBtn" class, the "InsidePopupsDivs" class, the "confirmToAdd", the "popupFinished" class are responded at "editGradesPopup.css"*/
+
+#newSubjectName {
+    font-size: large;
+    padding: 5px;
+}

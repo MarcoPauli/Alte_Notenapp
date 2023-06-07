@@ -33,6 +33,8 @@ function addParticularSubject(name, table) {
     tr.id = name;
     td1.setAttribute("class", "subject");
     td1.innerHTML = name;
+    td1.setAttribute("onclick", "showEditSubjectsPopup(this)");
+    td1.style.cursor = "pointer";
     td2.id = "KLN" + name;
     td2.innerHTML = "-";
     td2.setAttribute("onclick", "showEditGradesPopup(this)");
