@@ -69,6 +69,7 @@ function checkToDeleteSubject() {
     if (deleteThisSubject.checked && (subject != null)) {
         deleteSubject(subject);
         deleteThisSubjectNot.checked = "checked";
+        showInformation('Fach "' + subject.parentElement.children[0].innerHTML + '" erfolgreich gelöscht', 'green')
     } else if (subject == null) {
         showInformation("Fach wurde schon gelöscht", "red");
     }
