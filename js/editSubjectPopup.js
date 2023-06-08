@@ -28,13 +28,17 @@ confirmRenaming.addEventListener("click", renameSubject);
 
 function renameSubject() {
     let newSubjectName = document.getElementById("newSubjectName");
+    setIsEqual(false);
     checkID(newSubjectName.value);
-    if (!IDisEqual && (newSubjectName.value.trim() != "")) {
+    if ((IDisEqual == false) && (newSubjectName.value.trim() != "")) {
         let subject = document.getElementById(editSubjectValue);
-        subject.id = newSubjectName;
+        subject.parentNode.id = newSubjectName.value;
+        subject.removeAttribute("id");
+        subject.setAttribute("id", "sub" + newSubjectName.value);
         subject.innerHTML = newSubjectName.value;
+        showInformation('Fach in "' + newSubjectName.value + '" umbenannt!', "green");
     } else {
-        alert("Bitte anderen Namen überlegen!");
+        showInformation("Bitte anderen Namen überlegen!", "red");
     }
 }
 
@@ -43,6 +47,7 @@ function checkID(name) {
     for (let i = 1; i < tr.length; i++) {
         let trID = tr[i].id;
         if (trID == name) {
+            console.log(true)
             setIsEqual(true);
         }
     }
@@ -52,3 +57,17 @@ function setIsEqual(x) {
     IDisEqual = x;
     return IDisEqual;
 }
+
+//This function shows - if executed - the given information
+function showInformation(info, color) {
+    let informationDiv = document.getElementById("informationDiv");
+    informationDiv.style.display = "block";
+    informationDiv.style.color = color;
+    let information = document.getElementById("information");
+    information.innerHTML = info;
+    setTimeout(() => {
+        informationDiv.style.display = "none";
+        information.innerHTML = "";
+    }, 2000)
+}
+//End of function "showInformation"
