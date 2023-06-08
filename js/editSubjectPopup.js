@@ -3,7 +3,6 @@ let editSubjectsPopup = document.getElementById("editSubjectsPopup");
 let overlayDivi = document.getElementById("overlayDiv");
 
 function showEditSubjectsPopup(THIS) {
-    alert("Diese Funktion wird gerade entwickelt und ist demnächst verfügbar...");
     editSubjectsPopup.style.display = "block";
     overlayDivi.style.display = "block";
     saveSubjectValue(THIS);
@@ -56,6 +55,27 @@ function checkID(name) {
 function setIsEqual(x) {
     IDisEqual = x;
     return IDisEqual;
+}
+
+let confirmToDeleteThisSubject = document.getElementById("confirmToDeleteThisSubject");
+
+confirmToDeleteThisSubject.addEventListener("click", checkToDeleteSubject);
+
+function checkToDeleteSubject() {
+    let subject = document.getElementById(editSubjectValue);
+    let deleteThisSubject = document.getElementById("deleteThisSubject");
+    let deleteThisSubjectNot = document.getElementById("deleteThisSubjectNot");
+
+    if (deleteThisSubject.checked && (subject != null)) {
+        deleteSubject(subject);
+        deleteThisSubjectNot.checked = "checked";
+    } else if (subject == null) {
+        showInformation("Fach wurde schon gelöscht", "red");
+    }
+}
+
+function deleteSubject(subject) {
+    subject.parentElement.remove();
 }
 
 //This function shows - if executed - the given information
