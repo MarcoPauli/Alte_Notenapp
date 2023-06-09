@@ -136,7 +136,7 @@ function calculateEntireGradePointAverage() {
     let trLength = tr.length;
     let entireAverage;
     let averageAllSubjects = document.getElementById("averageAllSubjects");
-    averageAllSubjects.innerHTML = "-";
+    averageAllSubjects.innerHTML = "&#216;";
     averageAllSubjects.style.color = "black";
     let regularTrs;
     for (let i = 1; i < tr.length; i++) {
