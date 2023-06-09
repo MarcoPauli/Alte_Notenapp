@@ -66,7 +66,7 @@ function checkToDeleteSubject() {
     let deleteThisSubject = document.getElementById("deleteThisSubject");
     let deleteThisSubjectNot = document.getElementById("deleteThisSubjectNot");
 
-    if (deleteThisSubject.checked && (subject != null)) {
+    if (deleteThisSubject.checked && (subject.id != null)) {
         deleteSubject(subject);
         deleteThisSubjectNot.checked = "checked";
         showInformation('Fach "' + subject.parentElement.children[0].innerHTML + '" erfolgreich gelöscht', 'green')
