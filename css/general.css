@@ -27,12 +27,22 @@ main {
     cursor: pointer;
     position: absolute;
     top: 10%;
-    width: 20%;
-    right: 40%;
+    height: 100px;
+    width: 100px;
+    left: 45%;
+    right: 45%;
     text-align: center;
     z-index: 1;
     font-size: xx-large;
     font-weight: bolder;
+    background-color: whitesmoke;
+    border-radius: 100%;
+}
+
+#averageAllSubjects {
+    position: relative;
+    top: 30%;
+    
 }
 
 #standardVisible {
