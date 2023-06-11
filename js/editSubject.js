@@ -57,6 +57,7 @@ function addParticularSubject(name, table) {
 }
 
 function checkID(name) {
+    console.log(name)
     let tr = document.querySelectorAll("tr");
     for (let i = 1; i < tr.length; i++) {
         let trID = tr[i].id;
