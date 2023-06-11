@@ -26,6 +26,7 @@ let IDisEqual = false;
 confirmRenaming.addEventListener("click", renameSubject);
 
 function renameSubject() {
+    alert("hey")
     let newSubjectName = document.getElementById("newSubjectName");
     setIsEqual(false);
     checkID(newSubjectName.value);
