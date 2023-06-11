@@ -46,7 +46,7 @@ function checkID(name) {
     for (let i = 1; i < tr.length; i++) {
         let trID = tr[i].id;
         if (trID == name) {
-            alert(true)
+            console.log(trID)
             setIsEqual(true);
         }
     }
