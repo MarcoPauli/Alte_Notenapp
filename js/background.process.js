@@ -9,7 +9,7 @@ let backgroundProcessing = setInterval(() => {
     userBackgroundColor();
     checkToCalculateAverage();
     calculateEntireGradePointAverage();
-    //saveGradeTableOnLocalStorage();
+    saveGradeTableOnLocalStorage();
 }, 1000);
 //End of code executed once per second
 
