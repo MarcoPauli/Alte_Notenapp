@@ -69,6 +69,8 @@ main {
     right: 5%;
     top: 5%;
     font-size: xx-large;
+    width: 70px;
+    height: 70px;
     border: none;
     cursor: pointer;
     color: grey;
