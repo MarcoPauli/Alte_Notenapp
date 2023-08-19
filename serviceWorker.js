@@ -35,12 +35,22 @@ function putInCache(request, response) {
 
 async function cacheFirst(request) {
     let responseFromCache = await caches.match(request);
+    let responseFromNetwork = await fetch(request);
+    if (responseFromNetwork) {
+        putInCache(request, responseFromNetwork.clone());
+        return responseFromNetwork;
+    } else if (responseFromCache) {
+        return responseFromCache;
+    } 
+
+
+    /*let responseFromCache = await caches.match(request);
     if (responseFromCache) {
         return responseFromCache;
     }
     let responseFromNetwork = await fetch(request);
     putInCache(request, responseFromNetwork.clone());
-    return responseFromNetwork;
+    return responseFromNetwork;*/
 }
 
 self.addEventListener("fetch", (event) => {

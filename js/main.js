@@ -33,11 +33,11 @@ if (localstorage != null) {
 }
 //End of the if statement
 
-if ("serviceWorker" in navigator) {
+/*if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("serviceWorker.js", { scope: "/"})
     .then(() => console.log("service worker is working"))
     .catch((error) => console.warn(error));
-}
+}*/
 
 //Evenlisteners are also needed here
 editGradesBtn.addEventListener("click", editGradesBtnFunc);
