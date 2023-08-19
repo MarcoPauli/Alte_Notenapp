@@ -66,6 +66,7 @@ main {
 
 #editGradesBtn {
     position: fixed;
+    padding: auto;
     right: 5%;
     top: 5%;
     font-size: xx-large;
