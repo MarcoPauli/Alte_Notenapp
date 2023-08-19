@@ -54,7 +54,7 @@ main {
     text-decoration: underline;
     cursor: pointer;
     border: none;
-    background-color: aqua;
+    background-color: inherit;
     position: absolute;
     top: 30%;
     margin-left: 5px;
