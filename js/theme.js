@@ -11,6 +11,8 @@ function userBackgroundColor() {
 
 //This function changes to xmode
 function changeToXMode(color, backgroundColor, overlayDivBgColor, tbColor) {
+    let averageAllSubjectsDiv = document.getElementById("averageAllSubjectsDiv");
+    averageAllSubjectsDiv.style.color = color;
     let overlayDiv = document.getElementById("overlayDiv");
     let body = document.querySelector("body");
     let td = document.querySelectorAll("td");
