@@ -11,8 +11,6 @@ function userBackgroundColor() {
 
 //This function changes to xmode
 function changeToXMode(color, backgroundColor, overlayDivBgColor, tbColor) {
-    let averageAllSubjectsDiv = document.getElementById("averageAllSubjectsDiv");
-    averageAllSubjectsDiv.style.color = "white";
     let overlayDiv = document.getElementById("overlayDiv");
     let body = document.querySelector("body");
     let td = document.querySelectorAll("td");
@@ -24,6 +22,8 @@ function changeToXMode(color, backgroundColor, overlayDivBgColor, tbColor) {
     statistics.style.backgroundColor = backgroundColor;
     body.style.backgroundColor = backgroundColor;
     body.style.color = color;
+    let averageAllSubjectsDiv = document.getElementById("averageAllSubjectsDiv");
+    averageAllSubjectsDiv.style.color = "white";
     changeTableTheme(td, tbColor, color);
     changeTableTheme(th, tbColor, color);
 }
