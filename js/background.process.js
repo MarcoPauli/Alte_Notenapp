@@ -158,21 +158,22 @@ function calculateEntireGradePointAverage() {
     if (isTrue) {
         entireAverage = (entireAverage / regularTrs).toFixed(2);
         averageAllSubjects.innerHTML = entireAverage.toString().replace(".", ",");
+        averageAllSubjects = document.getElementById("averageAllSubjectsDiv");
         switch (true) {
             case entireAverage <= 1.5:
-                averageAllSubjects.style.color = "green";
+                averageAllSubjects.style.backgroundColor = "green";
                 break;
             case entireAverage <= 2.5:
-                averageAllSubjects.style.color = "darkgreen";
+                averageAllSubjects.style.backgroundColor = "darkgreen";
                 break;
             case entireAverage <= 3.5:
-                averageAllSubjects.style.color = "yellow";
+                averageAllSubjects.style.backgroundColor = "yellow";
                 break;
             case entireAverage <= 4.5:
-                averageAllSubjects.style.color = "darkorange";
+                averageAllSubjects.style.backgroundColor = "darkorange";
                 break;
             case entireAverage > 4.5:
-                averageAllSubjects.style.color = "red";
+                averageAllSubjects.style.backgroundColor = "red";
                 break;
         }
     }
