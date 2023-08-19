@@ -35,8 +35,9 @@ main {
     z-index: 1;
     font-size: xx-large;
     font-weight: bolder;
-    background-color: whitesmoke;
+    background-color: grey;
     border-radius: 100%;
+    color: white;
 }
 
 #averageAllSubjects {
