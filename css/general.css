@@ -66,7 +66,7 @@ main {
 
 #editGradesBtn {
     
-    border: 2px dotted darkblue;
+    border: none;
     position: fixed;
     padding: 10px;
     right: 5%;
@@ -74,7 +74,7 @@ main {
     font-size: xx-large;
     width: 70px;
     height: 70px;
-    
+    background-color: greenyellow;
     cursor: pointer;
     color: grey;
 }
