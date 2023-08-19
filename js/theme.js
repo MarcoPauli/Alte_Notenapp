@@ -1,7 +1,7 @@
 //The task of the function "userBackgroundColor" is to check which background color is currently being used by the system and, as soon as these settings are changed, adjust the app settings accordingly.
 function userBackgroundColor() {
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        changeToXMode("white", "rgb(50, 50, 50)", "rgba(50, 50, 50, 0.5)", "rgb(50, 50, 50)");
+        changeToXMode("white", "rgb(100, 100, 100)", "rgba(100, 100, 100, 0.5)", "rgb(100, 100, 100)");
     }
     if (!(window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         changeToXMode("black", "rgb(204,238,247)", "rgba(100, 100, 100, 0.5)", "white");
