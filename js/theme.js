@@ -4,7 +4,7 @@ function userBackgroundColor() {
         changeToXMode("white", "rgb(50, 50, 50", "rgba(50, 50, 50, 0.5", "rgb(50, 50, 50");
     }
     if (!(window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        changeToXMode("black", "aqua", "rgba(100, 100, 100, 0.5)", "white");
+        changeToXMode("black", "rgb(204,238,247)", "rgba(100, 100, 100, 0.5)", "white");
     }
 }
 //End of function "userBackgroundColor"
