@@ -83,6 +83,8 @@ function changeIntoEditMode() {
     let editGradesBtn = document.getElementById("editGradesBtn");
     editGradesBtn.innerHTML = "🔚";
     editGradesBtn.title = "Bearbeitungsmodus verlassen";
+    let showEditModeTxt = document.getElementById("showEditModeTxt");
+    showEditModeTxt.innerHTML = "Im Bearbeitungsmodus";
 }
 //End of function "changeIntoEditMode"
 
@@ -90,6 +92,8 @@ function leaveEditMode () {
     let editModeDiv = document.getElementById("editModeDiv");
     let standardInformation = document.getElementById("standardInformation");
     let editGradesBtn = document.getElementById("editGradesBtn");
+    let showEditModeTxt = document.getElementById("showEditModeTxt");
+    showEditModeTxt.innerHTML = "Im Ansichtmodus";
     editGradesBtn.innerHTML = "🖊";
     editGradesBtn.title = "Noten bearbeiten";
     editGradesBtn.removeEventListener("click", leaveEditMode);
