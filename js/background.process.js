@@ -159,6 +159,7 @@ function calculateEntireGradePointAverage() {
         entireAverage = (entireAverage / regularTrs).toFixed(2);
         averageAllSubjects.innerHTML = entireAverage.toString().replace(".", ",");
         averageAllSubjects = document.getElementById("averageAllSubjectsDiv");
+        averageAllSubjects.style.color = "white";
         switch (true) {
             case entireAverage <= 1.5:
                 averageAllSubjects.style.backgroundColor = "green";
