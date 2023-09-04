@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="de">
+  <!--BEGIN OF HEAD-->
   <head>
+    <!--GENERAL INFORMATION-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="aqua">
+    <meta name="keywords" content="Grade calculator, school">
+    <meta name="description" content="Grade calculator, school">
     <title>Notenapp</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="css/editSubjects.css">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/table.css">
-    <link rel="stylesheet" href="css/editGradesPopup.css">
+    <!--JAVASCRIPTS USED IN THIS APP-->
     <script src="js/main.js" defer=""></script>
-    <link rel="manifest" href="manifest.json">
     <script defer="" type="module" href="js/theme.js"></script>
     <script type="module" defer="" src="js/background.process.js"></script>
     <script defer="" src="js/editSubject.js"></script>
     <script type="module" defer="" src="js/info.js"></script>
     <script defer="" src="js/editSubjectPopup.js"></script>
     <script src="js/appInfo.js" defer></script>
+    <!--CSS-FILES USED IN THIS APP-->
+    <link rel="stylesheet" href="css/editSubjects.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/editGradesPopup.css">
+    <!--MANIFEST-FILE USED IN THIS APP-->
+    <link rel="manifest" href="manifest.json">
+    <!--ICONS USED IN THIS APP-->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="apple-touch-icon" href="img/icons/apple-icon-180.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="apple-touch-startup-image" href="img/icons/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
@@ -50,12 +59,15 @@
     <link rel="apple-touch-startup-image" href="img/icons/apple-splash-1334-750.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
     <link rel="apple-touch-startup-image" href="img/icons/apple-splash-640-1136.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
     <link rel="apple-touch-startup-image" href="img/icons/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-    <meta name="theme-color" content="aqua">
-    <meta name="keywords" content="Grade calculator, school">
-    <meta name="description" content="Grade calculator, school">
   </head>
+  <!--END OF HEAD-->
+  <!--BEGIN OF BODY-->
   <body>
-    <nav><img id="logo" src="img/favicon.ico" alt="Logo LM"></nav>
+    <!--BEGIN OF NAVIGATIONELEMENTS-->
+    <nav>
+      <img id="logo" src="img/favicon.ico" alt="Logo LM">
+    </nav>
+    <!--END OF NAVIGATIONELEMENTS-->
     <main>
       <div id="standardVisible">
         <div id="showEditModeTxt">Ansichtmodus</div>
@@ -254,4 +266,5 @@
       </div>
     </main>
   </body>
+  <!--END OF BODY-->
 </html>
