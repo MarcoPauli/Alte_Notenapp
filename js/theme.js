@@ -17,8 +17,12 @@ function changeToXMode(color, backgroundColor, overlayDivBgColor, tbColor) {
     let th = document.querySelectorAll("th");
     let statistics = document.getElementById("statistics");
     let editGradesPopup = document.getElementById("editGradesPopup");
+    let appInformationDiv = document.getElementById("appInformationDiv");
+    let editSubjectsPopup = document.getElementById("editSubjectsPopup");
     overlayDiv.style.backgroundColor = overlayDivBgColor;
     editGradesPopup.style.backgroundColor = tbColor;
+    appInformationDiv.style.backgroundColor = tbColor;
+    editSubjectsPopup.style.backgroundColor = tbColor;
     statistics.style.backgroundColor = backgroundColor;
     body.style.backgroundColor = backgroundColor;
     body.style.color = color;
