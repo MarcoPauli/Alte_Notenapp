@@ -17,6 +17,7 @@
     padding: 10px;
     font-size: large;
     cursor: pointer;
+    color: black;
 }
 
 #appInformationDiv {
@@ -59,6 +60,7 @@
     cursor: pointer;
     font-weight: bold;
     border: 1px solid black;
+    color: black;
 }
 
 #confirmAppInfoAction {
