@@ -74,8 +74,10 @@
             <button id="addSubjectBtn">Hinzufügen</button>
             <p id="addSubjectsDivInfo"><br></p>
           </div>
+          <button id="appSettingsBtn">Einstellungen⚙️</button>
           <div id="appInformationDiv">
-            <h3>App information kopieren/einfügen</h3>
+            <div id="copyAndPasteAppInfo" class="InsidePopupsDivs">
+            <h3>Appinformation kopieren/einfügen</h3>
             <select id="appInfo">
               <option id="standardAppInfo">--Bitte wählen--</option>
               <option id="copyAppInfo">Kopieren</option>
@@ -83,10 +85,17 @@
             </select><br><br>
             <input type="text" id="pasteAppInfoTextValue" placeholder="Appinfo einfügen" readonly><br><br>
             <button id="confirmAppInfoAction">Los!</button>
-            <!--<input type="radio" id="copyAppInformationRadio" name="appInfo">
-            <label for="appInfo">Kopieren</label>
-            <input type="radio" id="pasteAppInformationRadio" name="appInfo">
-            <label for="appInfo">Einfügen</label>-->
+            </div>
+            <div id="backoutApplication" class="InsidePopupsDivs">
+              <h3>App zurücksetzen</h3>
+              <p class="explainToUser">Die App zurücksetzen?</p>
+              <input type="radio" name="backoutApplicationi" id="backoutApplicationInput">
+              <label for="backoutApplicationInput">Ja</label>
+              <input type="radio" name="backoutApplicationi" id="backoutApplicationInputNot" checked="">
+              <label for="backoutApplicationInputNot">Nein</label><br><br>
+              <button id="confirmToBackoutApplication" class="deleteBtn">Zurücksetzen</button>
+            </div>
+            <button id="AppSettingsFinishedBtn" class="popupFinished">Fertig</button>
           </div>
         </div>
         <button id="editGradesBtn" title="Noten bearbeiten">🖊</button>
@@ -217,7 +226,7 @@
         </div>
         <div id="removeGradeDiv" class="InsidePopupsDivs">
           <h3 id="removeGradePopup">Note entfernen</h3>
-          <p id="explainToUser">Die Noten dieser Zelle löschen?</p>
+          <p class="explainToUser">Die Noten dieser Zelle löschen?</p>
           <input type="radio" name="delteCells" id="deleteThisCellRadio">
           <label for="deleteThisCellRadio">Ja</label>
           <input type="radio" name="delteCells" id="deleteThisCellRadioNot" checked="">

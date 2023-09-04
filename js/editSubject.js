@@ -8,7 +8,7 @@ addSubjectBtn.addEventListener("click", () => {
 function addSubject() {
     let table = document.getElementById("showGradesTable");
     let userInput = document.getElementById("addSubjectInput");
-    checkID(userInput.value);
+    checkIDi(userInput.value);
     if (!isEqual && !((userInput.value).includes(" ")) && !(userInput.value == "")) {
         addParticularSubject(userInput.value, table);
         userInput.value = "";
@@ -56,7 +56,7 @@ function addParticularSubject(name, table) {
     showInformation("Fach " + '"' + name + '"' + " hinzugefügt", "green")
 }
 
-function checkID(name) {
+function checkIDi(name) {
     console.log(name)
     let tr = document.querySelectorAll("tr");
     for (let i = 1; i < tr.length; i++) {
@@ -85,4 +85,3 @@ function showInformation(info, color) {
     }, 2000)
 }
 //End of function "showInformation"
-

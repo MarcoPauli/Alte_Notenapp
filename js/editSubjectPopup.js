@@ -27,7 +27,7 @@ confirmRenaming.addEventListener("click", renameSubject);
 
 function renameSubject() {
     let newSubjectName = document.getElementById("newSubjectName");
-    setIsEqual(false);
+    setIsEqual2(false);
     checkID(newSubjectName.value);
     if ((IDisEqual == false) && (newSubjectName.value.trim() != "")) {
         let subject = document.getElementById(editSubjectValue);
@@ -47,12 +47,12 @@ function checkID(name) {
         let trID = tr[i].id;
         if (trID == name) {
             console.log(trID)
-            setIsEqual(true);
+            setIsEqual2(true);
         }
     }
 }
 
-function setIsEqual(x) {
+function setIsEqual2(x) {
     IDisEqual = x;
     return IDisEqual;
 }

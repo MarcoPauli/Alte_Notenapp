@@ -20,9 +20,15 @@
 }
 
 #appInformationDiv {
-    position: absolute;
+    display: none;
+    position: fixed;
     top: 10%;
-    margin-left: 40%;
+    right: 10%;
+    left: 10%;
+    bottom: 10%;
+    background-color: white;
+    z-index: 4;
+    border: 2px solid rgb(51, 0, 153);
 }
 
 #editSubjectsPopup {
@@ -41,4 +47,25 @@
 #newSubjectName {
     font-size: large;
     padding: 5px;
+}
+
+#appSettingsBtn {
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    padding: 10px;
+    margin: 10px;
+    font-size: large;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+#confirmAppInfoAction {
+    border: none;
+    background-color: rgb(51, 0, 153);
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
 }
