@@ -68,9 +68,13 @@
       <img id="logo" src="img/favicon.ico" alt="Logo LM">
     </nav>
     <!--END OF NAVIGATIONELEMENTS-->
+    <!--BEGIN OF MAIN-->
     <main>
+      <!--BEGIN OF THE ELEMENTS THE USER CAN SEE BY DEFAULT-->
       <div id="standardVisible">
+        <!--THIS DIV SHOWS THE USER THE MODE HE HAS SELECTED-->
         <div id="showEditModeTxt">Ansichtmodus</div>
+        <!--THIS DIV INCLUDES ALL STANDARDINFORMATION SUCH AS THE MAINHEADING OF THE APPLICATION AS WELL AS THE AVERAGE AND THE STATISTICS-BUTTON-->
         <div id="standardInformation">
           <h1 id="mainHeading">Noten:</h1>
           <div id="averageAllSubjectsDiv" title="Øges">
@@ -78,39 +82,9 @@
           </div>
           <button id="statistics">Statistiken</button>
         </div>
-        <div id="editModeDiv">
-          
-          <div id="addSubjectsDiv">
-            <h3>Fach hinzufügen➕</h3>
-            <input type="text" id="addSubjectInput" placeholder="Name des Fachs"><br>
-            <button id="addSubjectBtn">Hinzufügen</button>
-            <p id="addSubjectsDivInfo"><br></p>
-          </div>
-          <button id="appSettingsBtn">Einstellungen⚙️</button>
-          <div id="appInformationDiv">
-            <div id="copyAndPasteAppInfo" class="InsidePopupsDivs">
-            <h3>Appinformation kopieren/einfügen</h3>
-            <select id="appInfo">
-              <option id="standardAppInfo">--Bitte wählen--</option>
-              <option id="copyAppInfo">Kopieren</option>
-              <option id="pasteAppInfo">Einfügen</option>
-            </select><br><br>
-            <input type="text" id="pasteAppInfoTextValue" placeholder="Appinfo einfügen" readonly><br><br>
-            <button id="confirmAppInfoAction">Los!</button>
-            </div>
-            <div id="backoutApplication" class="InsidePopupsDivs">
-              <h3>App zurücksetzen</h3>
-              <p class="explainToUser">Die App zurücksetzen?</p>
-              <input type="radio" name="backoutApplicationi" id="backoutApplicationInput">
-              <label for="backoutApplicationInput">Ja</label>
-              <input type="radio" name="backoutApplicationi" id="backoutApplicationInputNot" checked="">
-              <label for="backoutApplicationInputNot">Nein</label><br><br>
-              <button id="confirmToBackoutApplication" class="deleteBtn">Zurücksetzen</button>
-            </div>
-            <button id="AppSettingsFinishedBtn" class="popupFinished">Fertig</button>
-          </div>
-        </div>
+        <!--THIS BUTTON LETS THE USER SWITCH BETWEEN "ANSICHTMODUS" AND "BEARBEITUNGSGMODUS"-->
         <button id="editGradesBtn" title="Noten bearbeiten">🖊</button>
+        <!--THIS TABLE SHOWS THE GRADES AND AVERAGES OF EACH SINGLE SUBJECT-->
         <table id="showGradesTable">
           <tbody>
             <tr>
@@ -217,11 +191,74 @@
             </tr>
           </tbody>
         </table>
+        <!--END OF THE TABLE-->
       </div>
+      <!--END OF THE ELEMENTS THE USER CAN SEE BY DEFAULT-->
+      <!--BEGIN OF THE SO CALLED "EDIT-MODE-DIV" WHICH INCLUDES "ADDSUBJECTSDIV"; "APPSETTINGSBTN" AND "APPINFORMATIONDIV"-->
+      <div id="editModeDiv">
+        <!--BEGIN OF ADDSUBJECTSDIV-->
+        <div id="addSubjectsDiv">
+          <h3>Fach hinzufügen➕</h3>
+          <input type="text" id="addSubjectInput" placeholder="Name des Fachs"><br>
+          <button id="addSubjectBtn">Hinzufügen</button>
+          <p id="addSubjectsDivInfo"><br></p>
+        </div>
+        <!--THIS BUTTON ALLOWS THE USER TO OPEN THE APP-SETTINGS-POPUP-->
+        <button id="appSettingsBtn">Einstellungen⚙️</button>
+      </div>
+      <!--END OF "EDIT-MODE-DIV"-->
+      <!--BEGIN OF "INFORMATIONDIV"-->
       <div id="informationDiv">
         <font id="information"></font>
       </div>
+      <!--END OF "INFORMATIONDIV"-->
+      <!--BEGIN OF OVERLAYDIV-->
       <div id="overlayDiv"></div>
+      <!--END OF OVERLAYDIV-->
+      <!--BEGIN OF "APP-SETTINGS-POPUP"-->
+      <div id="appSettingsPopup">
+        <div id="copyAndPasteAppInfo" class="InsidePopupsDivs">
+        <h3>Appinformation kopieren/einfügen</h3>
+        <select id="appInfo">
+          <option id="standardAppInfo">--Bitte wählen--</option>
+          <option id="copyAppInfo">Kopieren</option>
+          <option id="pasteAppInfo">Einfügen</option>
+        </select><br><br>
+        <input type="text" id="pasteAppInfoTextValue" placeholder="Appinfo einfügen" readonly><br><br>
+        <button id="confirmAppInfoAction">Los!</button>
+        </div>
+        <div id="backoutApplication" class="InsidePopupsDivs">
+          <h3>App zurücksetzen</h3>
+          <p class="explainToUser">Die App zurücksetzen?</p>
+          <input type="radio" name="backoutApplicationi" id="backoutApplicationInput">
+          <label for="backoutApplicationInput">Ja</label>
+          <input type="radio" name="backoutApplicationi" id="backoutApplicationInputNot" checked="">
+          <label for="backoutApplicationInputNot">Nein</label><br><br>
+          <button id="confirmToBackoutApplication" class="deleteBtn">Zurücksetzen</button>
+        </div>
+        <button id="AppSettingsFinishedBtn" class="popupFinished">Fertig</button>
+      </div>
+      <!--END OF "APP-SETTINGS-POPUP"-->
+      <!--BEGIN OF "EDIT-SUBJECTS-POPUP"-->
+      <div id="editSubjectsPopup">
+        <div id="renameSubjectDiv" class="InsidePopupsDivs">
+          <h3 id="renameSubjectDivHeading">Fach umbenennen</h3>
+          <input type="text" id="newSubjectName" placeholder="Neuer Name"><br><br>
+          <button id="confirmRenaming" class="confirmToAdd">Umbenennen</button>
+        </div>
+        <div id="deleteSubjectDiv" class="InsidePopupsDivs">
+          <h3 id="deleteSubjectDivHeading">Fach löschen</h3>
+          <p id="explainSubjectDeletiionToUser">Dieses Fach löschen?</p>
+          <input type="radio" name="delteSubject" id="deleteThisSubject">
+          <label for="deleteThisSubject">Ja</label>
+          <input type="radio" name="delteSubject" id="deleteThisSubjectNot" checked="">
+          <label for="deleteThisSubjectNot">Nein</label><br><br>
+          <button id="confirmToDeleteThisSubject" class="deleteBtn">Löschen</button>
+          <button id="editSubjectFinished" class="popupFinished">Fertig</button>
+        </div>
+      </div>
+      <!--END OF "EDIT-SUBJECTS-POPUP"-->
+      <!--BEGIN OF "EDIT-GRADES-POPUP"-->
       <div id="editGradesPopup">
         <div id="addGradeDiv" class="InsidePopupsDivs">
           <h3 id="addGradeDivHeading">Note hinzufügen</h3>
@@ -247,24 +284,9 @@
         </div>
         <button id="finished" class="popupFinished">Fertig</button>
       </div>
-      <div id="editSubjectsPopup">
-        <div id="renameSubjectDiv" class="InsidePopupsDivs">
-          <h3 id="renameSubjectDivHeading">Fach umbenennen</h3>
-          <input type="text" id="newSubjectName" placeholder="Neuer Name"><br><br>
-          <button id="confirmRenaming" class="confirmToAdd">Umbenennen</button>
-        </div>
-        <div id="deleteSubjectDiv" class="InsidePopupsDivs">
-          <h3 id="deleteSubjectDivHeading">Fach löschen</h3>
-          <p id="explainSubjectDeletiionToUser">Dieses Fach löschen?</p>
-          <input type="radio" name="delteSubject" id="deleteThisSubject">
-          <label for="deleteThisSubject">Ja</label>
-          <input type="radio" name="delteSubject" id="deleteThisSubjectNot" checked="">
-          <label for="deleteThisSubjectNot">Nein</label><br><br>
-          <button id="confirmToDeleteThisSubject" class="deleteBtn">Löschen</button>
-          <button id="editSubjectFinished" class="popupFinished">Fertig</button>
-        </div>
-      </div>
+      <!--END OF "EDIT-GRADES-POPUP"-->
     </main>
+    <!--END OF MAIN-->
   </body>
   <!--END OF BODY-->
 </html>

@@ -1,14 +1,14 @@
 let appSettingsBtn = document.getElementById("appSettingsBtn");
 appSettingsBtn.addEventListener("click", () => {
-    let appInformationDiv = document.getElementById("appInformationDiv");
-    appInformationDiv.style.display = "block";
+    let appSettingsPopup = document.getElementById("appSettingsPopup");
+    appSettingsPopup.style.display = "block";
     let overlayDiv = document.getElementById("overlayDiv");
     overlayDiv.style.display = "block";
 });
 let AppSettingsFinishedBtn = document.getElementById("AppSettingsFinishedBtn");
 AppSettingsFinishedBtn.addEventListener("click", () => {
-    let appInformationDiv = document.getElementById("appInformationDiv");
-    appInformationDiv.style.display = "none";
+    let appSettingsPopup = document.getElementById("appSettingsPopup");
+    appSettingsPopup.style.display = "none";
     let overlayDiv = document.getElementById("overlayDiv");
     overlayDiv.style.display = "none";
 });

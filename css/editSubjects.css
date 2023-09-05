@@ -20,7 +20,7 @@
     color: black;
 }
 
-#appInformationDiv {
+#appSettingsPopup {
     display: none;
     position: fixed;
     top: 10%;
