@@ -1,5 +1,5 @@
 //At the beginning of this file, all variables (apart from the varaibles in the functions) are defined here
-let editGradesBtn = document.getElementById("editGradesBtn");
+
 let changeToEditGradesPopup = document.getElementById("changeToEditGradesPopup");
 let overlayDiv = document.getElementById("overlayDiv");
 let stopToChangeToEditMode = document.getElementById("stopToChangeToEditMode");
@@ -40,13 +40,6 @@ if (localstorage != null) {
 }*/
 
 //Evenlisteners are also needed here
-editGradesBtn.addEventListener("click", editGradesBtnFunc);
-
-function editGradesBtnFunc () {
-    editGradesBtn.removeEventListener("click", changeIntoEditMode);
-    editGradesBtn.addEventListener("click", leaveEditMode);
-    changeIntoEditMode();
-}
 
 addGradeDivBtn.addEventListener("click", () => {
     editGrades();
@@ -63,55 +56,7 @@ finished.addEventListener("click", () => {
 });
 //End of all the eventlisteners(apart form them that are defined in functions)
 
-//This function changes into the editmode
-function changeIntoEditMode() {
-    let klnClass = document.getElementsByClassName("KLNs");
-    let glnClass = document.getElementsByClassName("GLNs");
-    let subjectClass = document.getElementsByClassName("subject");
-    for (let i = 0; i < klnClass.length; i++) {
-        klnClass[i].setAttribute("onclick", "showEditGradesPopup(this)");
-        klnClass[i].style.cursor = "pointer";
-        subjectClass[i].setAttribute("onclick", "showEditSubjectsPopup(this)");
-        subjectClass[i].style.cursor = "pointer";
-        glnClass[i].setAttribute("onclick", "showEditGradesPopup(this)");
-        glnClass[i].style.cursor = "pointer";
-    }
-    let standardInformation = document.getElementById("standardInformation");
-    standardInformation.style.display = "none";
-    let editModeDiv = document.getElementById("editModeDiv");
-    editModeDiv.style.display = "block";
-    let editGradesBtn = document.getElementById("editGradesBtn");
-    editGradesBtn.innerHTML = "🔚";
-    editGradesBtn.title = "Bearbeitungsmodus verlassen";
-    let showEditModeTxt = document.getElementById("showEditModeTxt");
-    showEditModeTxt.innerHTML = "Bearbeitungsmodus";
-}
-//End of function "changeIntoEditMode"
 
-function leaveEditMode () {
-    let editModeDiv = document.getElementById("editModeDiv");
-    let standardInformation = document.getElementById("standardInformation");
-    let editGradesBtn = document.getElementById("editGradesBtn");
-    let showEditModeTxt = document.getElementById("showEditModeTxt");
-    showEditModeTxt.innerHTML = "Ansichtmodus";
-    editGradesBtn.innerHTML = "🖊";
-    editGradesBtn.title = "Noten bearbeiten";
-    editGradesBtn.removeEventListener("click", leaveEditMode);
-    editGradesBtn.addEventListener("click", editGradesBtnFunc);
-    standardInformation.style.display = "block";
-    editModeDiv.style.display = "none";
-    let klnClass = document.getElementsByClassName("KLNs");
-    let glnClass = document.getElementsByClassName("GLNs");
-    let subjectClass = document.getElementsByClassName("subject");
-    for (let i = 0; i < klnClass.length; i++) {
-        klnClass[i].removeAttribute("onclick")
-        klnClass[i].style.cursor = "unset";
-        subjectClass[i].removeAttribute("onclick");
-        subjectClass[i].style.cursor = "unset";
-        glnClass[i].removeAttribute("onclick");
-        glnClass[i].style.cursor = "unset";
-    }
-}
 
 //With this function you can edit the grades
 function editGrades() {
@@ -166,15 +111,6 @@ function removeCell() {
     }
 }
 //End of function "removeCell"
-
-/*function showEditSubjectsPopup(THIS) {
-    alert("Diese Funktion wird gerade entwickelt und ist demnächst verfügbar...");
-    let editSubjectsPopup = document.getElementById("editSubjectsPopup");
-    editSubjectsPopup.style.display = "block";
-    let overlayDiv = document.getElementById("overlayDiv");
-    overlayDiv.style.display = "block";
-    saveSubjectValue(THIS);
-}*/
 
 //This function shows - if executed - the given information
 function showInformation(info, color) {

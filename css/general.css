@@ -1,12 +1,12 @@
-/*General*/
+/*THIS CSS DOCUMENT INCLUDES ALL GENERAL INFORMATION*/
+
+:root {
+    --blue: rgb(51, 0, 153);
+}
+
 body {
     margin: 0;
     background-color: rgb(204,238,247);
-}
-
-main {
-    margin: 16px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 #logo{
@@ -15,6 +15,23 @@ main {
     right: 0;
     width: 5%;
     cursor: pointer;
+}
+
+main {
+    margin: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#standardVisible {
+    display: block;
+}
+
+#showEditModeTxt {
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    color: orangered;
+    font-weight: bold;
 }
 
 #mainHeading {
@@ -46,12 +63,8 @@ main {
     
 }
 
-#standardVisible {
-    display: block;
-}
-
 #statistics {
-    color: rgb(51, 0, 153);
+    color: var(--blue);
     text-decoration: underline;
     cursor: pointer;
     border: none;
@@ -66,7 +79,6 @@ main {
 }
 
 #editGradesBtn {
-    
     border: 2px solid grey;
     position: fixed;
     padding: 10px;
@@ -80,19 +92,16 @@ main {
 }
 
 #editGradesBtn:hover {
-    color: rgb(51, 0, 153);
+    color: var(--blue);
 }
 
-#overlayDiv {
-    background-color: rgba(100, 100, 100, 0.5);
-    position: fixed;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    top: 0;
-    z-index: 3;
+/*Following the HTML-document, there should be css-code for the table at this position. Please see table.css for that code*/
+
+#editModeDiv {
     display: none;
 }
+
+/*editSubjects.css*/
 
 #informationDiv {
     text-align: center;
@@ -116,16 +125,15 @@ main {
     bottom: 10%;
 }
 
-#editModeDiv {
+#overlayDiv {
+    background-color: rgba(100, 100, 100, 0.5);
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 3;
     display: none;
-}
-
-#showEditModeTxt {
-    position: absolute;
-    top: 2%;
-    left: 1%;
-    color: orangered;
-    font-weight: bold;
 }
 
 #standardInformation {
