@@ -1,7 +1,6 @@
 /*This file manages that the user can switch between normal-mode and edit-mode*/
 let standardInformation = document.getElementById("standardInformation");
 let editModeDiv = document.getElementById("editModeDiv");
-let editGradesBtn = document.getElementById("editGradesBtn");
 let showEditModeTxt = document.getElementById("showEditModeTxt");
 
 let editGradesBtn = document.getElementById("editGradesBtn");
