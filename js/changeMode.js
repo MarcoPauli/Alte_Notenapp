@@ -1,4 +1,8 @@
 /*This file manages that the user can switch between normal-mode and edit-mode*/
+let standardInformation = document.getElementById("standardInformation");
+let editModeDiv = document.getElementById("editModeDiv");
+let editGradesBtn = document.getElementById("editGradesBtn");
+let showEditModeTxt = document.getElementById("showEditModeTxt");
 
 let editGradesBtn = document.getElementById("editGradesBtn");
 editGradesBtn.addEventListener("click", editGradesBtnFunc);
@@ -28,14 +32,10 @@ function changeMode (currentFunction, stStyle, editModeStyle, btnTxt, btnTitle, 
         currentFunction(subjectClass, i, "showEditSubjectsPopup(this)");
         currentFunction(glnClass, i, "showEditGradesPopup(this)");
     }
-    let standardInformation = document.getElementById("standardInformation");
     standardInformation.style.display = stStyle;
-    let editModeDiv = document.getElementById("editModeDiv");
     editModeDiv.style.display = editModeStyle;
-    let editGradesBtn = document.getElementById("editGradesBtn");
     editGradesBtn.innerHTML = btnTxt;
     editGradesBtn.title = btnTitle;
-    let showEditModeTxt = document.getElementById("showEditModeTxt");
     showEditModeTxt.innerHTML = modeTxt;
 }
 
